@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fourth"> </div>
+        <div class="column is-one-fourth">
+          <figure class="image is-128x128">
+            <img src="{% static 'img/thinking.svg' %}">
+          </figure>
+          <h1 class="title"> research experience</h1>
+          <p>
+            This summer, I will be conducting research in improving autonomous dialogue agents using deep learning. Primarily,
+            I will be building our Python-based chatbot infastructure, constructing better corpuses/datasets (i.e. web scraping) 
+            to train our deep learning model on and devising methods of quantitatively evaluating our dialogue system (e.g. Mechanical Turk). 
+            <br> <br>
+
+            In 2016, I published a conference paper in the 2016 SPIE Defense journal and presented a talk on the cloud architecture I helped design for the online
+            processing of sensor data from autonomous vehicles with applications for abstracting computation for mobile applications.<br> <br>
+
+            I've previously volunteered at McMaster University under Professor Jamal Deen and Dr. Thamarasa, assisting
+            in data analysis using D3.js and Javascript. In addition, I helped write scripts to speed up instantiation of EC2 instances
+            for analyzing tracker data. <br> <br>
+
+            Check out my <a href="/projects">side projects</a>, my <a href="/research">research</a>, my <a href="/resume">resume</a>
+            or <a href="/">go home</a>.          
+          </p>
+        </div>
+        <div class="column is-one-fourth"> </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

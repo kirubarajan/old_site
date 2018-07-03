@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column"></div>
+        <div class="column is-one-fourth">
+          <figure class="image is-128x128">
+            <img src="{% static 'img/hello.svg' %}">
+          </figure>
+          <h1 class="title"> hi, my name is arun. </h1>
+          
+          <p>
+            I'm an undergraduate at the University of Pennsylvania enrolled in the Artificial Intelligence
+            dual degree program, studying computer science and cognitive science (linguistics).
+            Read <a href="/blog">my blog</a> or reach me at <strong>kiruba@cis.upenn.edu</strong>. <br> <br> 
+            
+            This summer I will be researching natural language processing at Penn, using deep learning to improve
+            dialogue agents under Professor Chris Callison-Burch. Last year, I worked on cloud infastructure
+            for self-driving cars at an autonomous driving startup named Trackgen. <br> <br>
+
+            In addition to machine learning, I also like web development in ES6 JavaScript and Python 
+            (this site was written in Flask). As a software engineer at <a href="https://pennlabs.org">Penn Labs</a>, I work on
+            our public API as well as the PennSDK to help our developers create apps that over ten thousand students use. <br> <br>
+
+            Lately, I've been trying to make computer science education and software engineering more approachable through 
+            <a href="https://beta.elore.io">elore</a>, the open source education platform I co-founded at MIT. <br> <br>
+            
+            Check out my <a href="/projects">side projects</a>, my <a href="/research">research</a>, or my <a href="/resume">resume</a>.
+          </p>
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

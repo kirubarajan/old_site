@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-fourth"> </div>
+        <div class="column is-one-fourth">
+          <figure class="image is-128x128">
+            <img src="{% static 'img/balloons.svg' %}">
+          </figure>
+          <h1 class="title"> my projects </h1>
+          <p class="">
+            Here are some of the software projects I've built/contributed to:
+            <br> <br>
+        </div>
+        <div class="column is-one-fourth"> </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="columns is-multiline">
+        {% for project in projects %}          
+          <div class="column is-one-third">
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>{{ project.name }}</strong> <small>{{ project.users }}</small>
+                      <br>
+                      {{ project.description }}
+                    </p>
+                  </div>
+                  <nav class="level is-mobile">
+                    <div class="level-left">
+                      <a class="level-item" href="{{ project.link }}">
+                        <span class="icon is-small"><i class="far fa-window-restore"></i></span>
+                      </a>
+                      <a class="level-item" href="{{ project.github }}">
+                        <span class="icon is-small"><i class="fab fa-github"></i></span>
+                      </a>
+                    </div>
+                  </nav>
+                </div>
+              </article>
+            </div>
+          </div>
+        {% endfor %}            
+      </div>
+
+      <div class="container">
+        <div class="columns">
+          <div class="column is-one-fourth"> </div>
+          <div class="column is-one-fourth">
+              Check out my <a href="/projects">side projects</a>, my <a href="/research">research</a>, my <a href="/resume">resume</a>
+              or <a href="/">go home</a>. </p>
+          </div>
+          <div class="column is-one-fourth"> </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
