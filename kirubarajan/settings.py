@@ -25,16 +25,7 @@ SECRET_KEY = '&f&s^t9(s3%2)_yx)c2lcqj%3h-v4+qgx%hm21jm*06+fb^1(b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*.kirubarajan.com', 'kirubarajan.com', 'site.kirubarajan.com', 'localhost', '45.63.83.17']
-
-def ipaddresses():
-    iplist = []
-    for interface in netifaces.interfaces():
-        addrs = netifaces.ifaddresses(interface)
-    for x in (netifaces.AF_INET, netifaces.AFINET6):
-        if x in addrs:
-            iplist.append(addrs[x][0]['addr'])
-    return ip_list
+ALLOWED_HOSTS = ['.kirubarajan.com', 'kirubarajan.com', 'site.kirubarajan.com', 'localhost', '45.63.83.17']
 
 # Application definition
 
@@ -133,5 +124,3 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),
 )
-
-ALLOWED_HOSTS += ipaddresses()
