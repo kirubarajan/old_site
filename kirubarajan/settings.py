@@ -27,6 +27,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*.kirubarajan.com', 'kirubarajan.com', 'site.kirubarajan.com', 'localhost', '45.63.83.17']
 
+def ipaddresses():
+    iplist = []
+    for interface in netifaces.interfaces():
+        addrs = netifaces.ifaddresses(interface)
+    for x in (netifaces.AF_INET, netifaces.AFINET6):
+        if x in addrs:
+        iplist.append(addrs[x][0]['addr'])
+    return ip_list
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -124,3 +133,5 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),
 )
+
+ALLOWED_HOSTS += ipaddresses()
