@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&f&s^t9(s3%2)_yx)c2lcqj%3h-v4+qgx%hm21jm*06+fb^1(b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kirubarajan.com', 'site.kirubarajan.com', 'localhost']
+ALLOWED_HOSTS = ['www.kirubarajan.com', 'kirubarajan.com', 'site.kirubarajan.com', 'localhost']
 
 # Application definition
 
@@ -124,5 +124,3 @@ SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATICFILES_DIRS = (
   os.path.join(SITE_ROOT, 'static/'),
 )
-
-ALLOWED_HOSTS = ['kirubarajan.com', 'site.kirubarajan.com', 'localhost']
