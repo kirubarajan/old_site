@@ -3,6 +3,7 @@ from django.conf import settings
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
+    bulma_color = models.CharField(max_length=50, null=True, blank=True)
 
     class Meta:
         db_table = 'Category'
@@ -12,7 +13,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100)
     body = models.TextField()
-    category = models.OneToOneField(Category, on_delete=models.DO_NOTHING)
+    category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
 
     class Meta:
         db_table = 'Post'

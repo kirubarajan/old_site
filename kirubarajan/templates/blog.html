@@ -21,12 +21,12 @@
                       <div class="content">
                           <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
                           <p> {{ post.subtitle }} </p>
-                          <span class="tag is-info"> {{ post.category.name }} </span> <br>
+                          <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> <br>
                       </div>
                     </div>
                   </article>
                 </div>
-              </a>
+              </a> <br>
               {% endfor %}
             </p>
         </div>
