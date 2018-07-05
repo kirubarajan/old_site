@@ -25,7 +25,7 @@ SECRET_KEY = '&f&s^t9(s3%2)_yx)c2lcqj%3h-v4+qgx%hm21jm*06+fb^1(b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['site.kirubarajan.com', 'kirubarajan.com', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
