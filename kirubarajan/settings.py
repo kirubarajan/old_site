@@ -33,7 +33,7 @@ def ipaddresses():
         addrs = netifaces.ifaddresses(interface)
     for x in (netifaces.AF_INET, netifaces.AFINET6):
         if x in addrs:
-        iplist.append(addrs[x][0]['addr'])
+            iplist.append(addrs[x][0]['addr'])
     return ip_list
 
 # Application definition
