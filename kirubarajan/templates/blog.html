@@ -31,25 +31,31 @@
             {% endif %}
             <br> <br>
             <p style="padding-bottom: 1rem">Latest Posts:</p>
-              {% for post in posts %}
-              <a href="/post/{{post.id}}" >
-                <div class="box">
-                  <article class="media">
-                    <div class="media-content">
-                      <div class="content">
-                          <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
-                          <p> {{ post.subtitle }} </p>
-                          <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> <br>
-                      </div>
-                    </div>
-                  </article>
-                </div>
-              </a> <br>
-              {% endfor %}
-            </p>
         </div>
         <div class="column is-one-fourth"> </div>
       </div>
+
+      <div class="columns is-multiline">
+        {% for post in posts %}
+        <div class="column is-one-third">
+          <a href="/post/{{post.id}}" >
+            <div class="box">
+              <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                      <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
+                      <p> {{ post.subtitle }} </p>
+                      <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> <br>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </a> 
+        </div>
+        <br>
+        {% endfor %}
+      </div>
     </div>
+    
   </section>
 {% endblock %}
