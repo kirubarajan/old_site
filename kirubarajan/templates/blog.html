@@ -11,8 +11,20 @@
             <img src="{% static 'img/papers.svg' %}">
           </figure>
             <h1 class="title"> my blog </h1>
-            <p>Latest Posts:</p>
-            <br>
+            <p style="padding-bottom: 0.2rem">Select Category: </p> 
+            {% for category in categories %}
+            <a href="/blog/category/{{ category.id }}"> 
+              <span class="tag is-{{ category.bulma_color }}"> {{ category.name }} </span> 
+            </a>
+            {% endfor %}
+
+            {% if select %}
+            <a href="/blog"> 
+              <span class="tag is-light"> All </span> 
+            </a>
+            {% endif %}
+            <br> <br>
+            <p style="padding-bottom: 1rem">Latest Posts:</p>
               {% for post in posts %}
               <a href="/post/{{post.id}}" >
                 <div class="box">
