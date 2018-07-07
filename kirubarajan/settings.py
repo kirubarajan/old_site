@@ -119,7 +119,7 @@ USE_TZ = True
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 STATIC_ROOT = os.path.join(SITE_ROOT, 'static/')
-STATIC_URL = STATIC_ROOT
+STATIC_URL = "https://storage.googleapis.com/kirubarajan-site.appspot.com/assets/"
 
 STATICFILES_DIRS = [
     os.path.join(SITE_ROOT, 'assets/'),
