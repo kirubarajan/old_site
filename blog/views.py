@@ -1,4 +1,5 @@
-import markdown2
+import markdown
+from mdx_gfm import GithubFlavoredMarkdownExtension
 from django.shortcuts import render
 from blog.models import Post, Category
 
@@ -14,5 +15,5 @@ def blog(request):
 
 def post(request, id):
     post = Post.objects.get(id=id)
-    post.body = markdown2.markdown(post.body)
+    post.body = markdown.markdown(post.body, extensions=[GithubFlavoredMarkdownExtension()])
     return render(request, 'post.html', {'post': post})

@@ -12,6 +12,7 @@
 .generated h3 {
     font-size: 100% !important;
     font-weight: bold;
+    margin-top: 1rem !important;
     margin-bottom: 1rem !important;
 }
 
@@ -25,4 +26,8 @@
 
 .generated li {
     margin-bottom: 1rem;
+}
+
+.generated code {
+    padding: 1rem
 }
