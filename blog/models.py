@@ -12,8 +12,10 @@ class Post(models.Model):
     id = models.CharField(max_length=50, primary_key=True)
     title = models.CharField(max_length=100)
     subtitle = models.CharField(max_length=100)
+    length = models.CharField(max_length=100)
     body = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
+    recommended = models.BooleanField(default=False)
 
     class Meta:
         db_table = 'Post'

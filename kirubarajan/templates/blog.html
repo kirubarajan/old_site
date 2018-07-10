@@ -45,7 +45,9 @@
                   <div class="content">
                       <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
                       <p> {{ post.subtitle }} </p>
-                      <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> <br>
+                      <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> 
+                      {% if post.recommended %} <span class="tag is-info"> Recommended </span> {% endif %}
+                      <span class="tag is-light"> {{ post.length }} read </span> <br>
                   </div>
                 </div>
               </article>
