@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Avenir';
+    src: url('https://storage.googleapis.com/kirubarajan-site.appspot.com/assets/AvenirLTStd-Book.otf') format('opentype');
+}
+
+h1 {
+    font-family: 'Avenir', !important;
+}
+
 .generated h1 {
     font-size: 200% !important;
     font-weight: 600 !important;
