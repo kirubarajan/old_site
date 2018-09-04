@@ -5,7 +5,6 @@ from about.views import splash, projects, research
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),
     path('projects/', projects, name='projects'),
     path('research/', research, name='research'),
     path('post/<str:id>', post, name='post'),
