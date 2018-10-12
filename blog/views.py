@@ -9,9 +9,13 @@ def category(request, category):
     return render(request, 'blog.html', {'posts': posts, 'categories': categories, 'select': True})
 
 def blog(request):
-    posts = Post.objects.all()
+    sections = list()
     categories = Category.objects.all()
-    return render(request, 'blog.html', {'posts': posts, 'categories': categories, 'select': False})
+    for category in categories:
+        posts = Post.objects.filter(category=category)
+        sections.append({"posts": posts, "category": category})
+    sections.reverse()
+    return render(request, 'blog.html', {'sections': sections, 'categories': categories, 'select': False})
 
 def post(request, id):
     post = Post.objects.get(id=id)

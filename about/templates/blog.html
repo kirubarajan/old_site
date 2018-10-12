@@ -20,44 +20,47 @@
             <img src="{% static 'img/papers.svg' %}">
           </figure>
             <h1 class="title"> my blog </h1>
-            {% for category in categories %}
-            <a href="/blog/category/{{ category.id }}"> 
-              <span class="tag is-{{ category.bulma_color }}"> {{ category.name }} </span> 
-            </a>
-            {% endfor %}
-
-            {% if select %}
-            <a href="/blog"> 
-              <span class="tag is-light"> All </span> 
-            </a>
-            {% endif %}
-            <br> <br>
-            <p>Latest Posts:</p>
+            <p>Welcome to my blog - I like writing about my work and (sometimes)
+              my personal life. I also review <a href="https://en.wikipedia.org/wiki/Shawarma">Shawarma</a> 
+              from around the world! Contact me with ideas at <a href="mailto:ideas@kirubarajan.com">ideas@kirubarajan.com</a>.</p>
+            <br />
         </div>
         <div class="column is-one-fourth"> </div>
       </div>
 
-      <div class="columns is-multiline">
-        {% for post in posts %}
-        <div class="column is-one-third">
-          <a href="/post/{{post.id}}" >
-            <div class="box">
-              <article class="media">
-                <div class="media-content">
-                  <div class="content">
-                      <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
-                      <p> {{ post.subtitle }} </p>
-                      {% if post.recommended %} <span class="tag is-info"> Recommended </span> {% endif %}
-                      <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> 
-                      <span class="tag is-light"> {{ post.length }} read </span> <br>
-                  </div>
+      <div class="columns">
+        <div class="column is-one-quarter"></div>
+
+        <div class="column is-half">
+            <div class="columns is-multiline">
+                {% for section in sections %}
+                <div class="column is-half">
+                  <p class="subtitle"><strong>{{section.category.name}}</strong></p>
+                  {% for post in section.posts %}
+                  <a href="/post/{{post.id}}" >
+                    <div class="box">
+                      <article class="media">
+                        <div class="media-content">
+                          <div class="content">
+                              <p style="margin-bottom: 0.5rem" class="subtitle"> <strong> {{ post.title }} </strong> </p>
+                              <p> {{ post.subtitle }} </p>
+                              {% if post.recommended %} <span class="tag is-info"> Recommended </span> {% endif %}
+                              <span class="tag is-{{ post.category.bulma_color }}"> {{ post.category.name }} </span> 
+                              <span class="tag is-light"> {{ post.length }} read </span> <br>
+                          </div>
+                        </div>
+                      </article>
+                    </div>
+                  </a>
+                  <br />
+                  {% endfor %}
                 </div>
-              </article>
-            </div>
-          </a> 
+                <br>
+                {% endfor %}
+              </div>
         </div>
-        <br>
-        {% endfor %}
+
+        <div class="column is-one-quarter"></div>
       </div>
     </div>
     
