@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="section" style="padding-top: 0rem">
+    <div class="container">
+      <div class="columns">
+        <div class="column"> </div>
+        <div class="column">
+          <figure class="image is-128x128">
+            <img src="{% static 'img/thinking.svg' %}">
+          </figure>
+          <h1 class="title"> some consulting </h1>
+          <p>           
+						I currently consult with a variety of cloud companies for deep learning infrastructure solutions. 
+						Some of my clients include <a href="https://digitalocean.com">Digital Ocean</a>, <a href="https://www.alibabacloud.com">Alibaba Cloud</a> and
+						<a href="https://www.trackgen.com"> TrackGen</a>. I'm also the lead software engineer on the Platform Team at <a href="https://pennlabs.org">Penn Labs</a>, scaling our services and their public APIs to tens of thousands of students.     
+					</p>
+        </div>
+        <div class="column"> </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

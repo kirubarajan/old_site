@@ -10,3 +10,6 @@ def projects(request):
 
 def research(request):
     return render(request, 'research.html')
+
+def consulting(request):
+    return render(request, 'consulting.html')

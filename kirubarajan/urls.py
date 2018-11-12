@@ -3,10 +3,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from blog.views import blog, post, category
-from about.views import splash, projects, research
+from about.views import splash, projects, research, consulting
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('consulting/', consulting, name='consulting'),
     path('projects/', projects, name='projects'),
     path('research/', research, name='research'),
     path('post/<str:id>', post, name='post'),
