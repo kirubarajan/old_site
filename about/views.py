@@ -13,3 +13,6 @@ def research(request):
 
 def consulting(request):
     return render(request, 'consulting.html')
+
+def teaching(request):
+    return render(request, 'teaching.html')
