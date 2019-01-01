@@ -5,8 +5,12 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     bulma_color = models.CharField(max_length=50, null=True, blank=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         db_table = 'Category'
+    
 
 class Post(models.Model):
     id = models.CharField(max_length=50, primary_key=True)
