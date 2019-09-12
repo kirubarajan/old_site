@@ -22,11 +22,9 @@
   <section>
     <div class="container">
       <div class="columns">
-        <div class="column is-one-sixth"></div>
-        <div class="column is-two-thirds">
             <div class="columns is-multiline">
                 {% for section in sections %}
-                <div class="column is-half">
+                <div class="column is-one-third">
                   <p class="subtitle"><strong>{{section.category.name}}</strong></p>
                   {% for post in section.posts %}
                   <a href="/post/{{post.id}}" >
