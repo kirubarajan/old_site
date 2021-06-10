@@ -1,4 +1,4 @@
-Django==2.0.8
+Django==2.2.24
 gunicorn==19.9.0
 Markdown==2.6.11
 py-gfm==0.1.3
